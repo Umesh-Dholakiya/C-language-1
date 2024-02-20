@@ -1,77 +1,85 @@
 #include<stdio.h>
 
 
-void sum(int x, int y){
-    printf("sum of %d and %d is %d \n\n",x,y,x+y);
+void sum(int a, int b) {
+    printf("Sum of %d and %d is %d\n", a, b, a + b);
 }
 
-void sub(int x, int y){
-    printf("substrecktion of %d and %d is %d \n\n",x,y,x-y);
+void sub(int a, int b) {
+    printf("Subtraction of %d and %d is %d\n", a, b, a - b);
 }
 
-void mul(int x, int y){
-    printf("multipltipliction of %d and %d is %d \n\n",x,y,x*y);
+void multiply(int a, int b) {
+    printf("Multiplication of %d and %d is %d\n", a, b, a * b);
 }
 
-void div(int x, int y){
-    printf("devition of %d and %d is %d \n\n",x,y,x/y);
+void division(int a, int b) {
+    if (b != 0)
+        printf("Division of %d and %d is %d\n", a, b, a / b);
 }
 
-void mod(int x, int y){
-    printf("modeulo of %d and %d is %d \n\n",x,y,x%y);
+void modulus(int a, int b) {
+    printf("Modulus of %d and %d is %d\n", a, b, a % b);
 }
 
 
-void main(){
-    int a,b,choice;
+int main()
+{
+    int i , j ,choice;
    
-        printf("enter the value of a number :- \n\n");
-        scanf("%d",&a);
+        printf("enter the value of a number :-");
+        scanf("%d",&i);
        
-        printf("enter the value of b number :- \n\n");
-        scanf("%d",&b);
-       
+        printf("enter the value of b number :-");
+        scanf("%d",&j);
+        
+        printf("\n");
         do{
-            printf("sarvalo karva mate 1 dabavo\n");
-            printf("badbaki karva mate 2 dabavo\n");
-            printf("gunakar karva mate 3 dabavo\n");
-            printf("bhangakar karva mate 4 dabavo\n");
-            printf("takavari kadhva mate 5 dabavo\n");
-            printf("aa janjat mathi bar nikalva mate 0 dabavo\n");
+            printf("Press 1 for +\n");
+            printf("Press 2 for -\n");
+            printf("Press 3 for *\n");
+            printf("Press 4 for /\n");
+            printf("Press 5 for %%\n");
+            printf("Press 0 for Exit.....\n");
             printf("enter your choice . . .");
+            
+            printd("\n");
             scanf("%d",&choice);
            
-                switch(choice){
+                switch(choice)
+				{
                    
                     case 1:
-                        sum(a,b);
+                        sum(i, j);
                     break;
                    
                     case 2:
-                        sub(a,b);
+                        sub(i, j);
                     break;
                    
                     case 3:
-                        mul(a,b);
+                        multiply(i, j);
                     break;
                    
                     case 4:
-                        div(a,b);
+                        division(i, j);
                     break;
                    
                     case 5:
-                        mod(a,b);
+                        modulus(i, j);
                     break;
                        
                     case 0:
-                        printf("you are exited . . .");
+                        printf("Thank Yuhh For Joining Us");
                     break;
                    
                     default:
-                    printf("\n----------------------------------------------------\n");
-                        printf("\n\nPLESE ENTER THE VALID NUMBER . . . \n\n");
+                    printf("\n*******************************************\n");
+                        printf("PLease Enter Valid Number....!!!!\n");
                     break;
                 }
-        }while(choice!=0);
+        }
+		while(choice!=0);
+		
+		return 0;
 }
-
